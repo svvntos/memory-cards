@@ -1,1 +1,66 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,500,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: plum;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    position: relative;
+}
+
+h1 button {
+    position: absolute;
+    right: 0;
+    transform: translate(85%, -550%);
+    z-index: 2;
+}
+
+.btn {
+    background-color: #fff;
+    border:  1px solid #aaa;
+    border-radius: 3em;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    padding: 1rem 1rem;
+}
+
+.btn-small {
+    font-size: .8rem
+    padding: 2rem 3rem;
+}
+
+.btn-ghost {
+    border: 0;
+    background-color: transparent;
+}
+
+.clear {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+}
+
+.cards {
+    perspective: 200em;
+    position: relative;
+    height: 20em;
+    width: 15em;
+    max-width: 100%;
+}
+
+.card {
+    position: absolute;
+}
+
