@@ -14,7 +14,7 @@ const addContainer = document.getElementById('add-container');
 
 let currentActiveCard = 0;
 
-const cardEl = [];
+const cardsEl = [];
 
 const cardsData = [
   {
@@ -60,8 +60,31 @@ function createCard(data, index) {
 
     card.addEventListener('click' || 'touchstart', () => card.classList.toggle('show-answer'));
 
-    cardEl.push(card);
+    cardsEl.push(card);
     cardsContainerEL.appendChild(card);
+    updateCurrentEl();
 }
 
+function updateCurrentEl()  {
+    currentEL.innerText  = `${currentActiveCard + 1}/${cardsEl.length}`;
+}
+
+
+
 createCards();
+
+
+nextBtn.addEventListener('click' || 'touchstart', () => {
+    cardsEl[currentActiveCard].className = 'card left';
+
+    currentActiveCard = currentActiveCard + 1;
+
+    if (currentActiveCard > cardsEl.length - 1) {
+       currentActiveCard = cardsEl.length - 1;
+    }
+
+    cardsEl[currentActiveCard].className = 'card active';
+    updateCurrentEl();
+
+
+});
