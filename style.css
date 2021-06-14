@@ -18,7 +18,7 @@ body {
 
 h1 {
     position: relative;
-    top: -11rem;
+    top: -10rem;
 }
 
 h1 button {
@@ -124,6 +124,11 @@ h1 button {
     height: 100%;
     width: 100%;
     background: #fff;
+}
+.inner-card-front p , .inner-card-back p {
+    font-size: .8em;
+    max-width: 100%;
+    margin: 1em 1em;
 }
 
 .inner-card-front {
